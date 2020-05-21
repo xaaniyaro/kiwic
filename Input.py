@@ -16,11 +16,11 @@ import csv
 class Input():
     def process(self, fileString):
         if '.txt' in fileString:
-            self.txtFile(fileString)
+            return self.txtFile(fileString)
         elif '.csv' in fileString:
-            self.csvFile(fileString)
+            return self.csvFile(fileString)
         else:
-            'Formato de archivo no soportado'
+            print('Formato de archivo no soportado')
 
     def txtFile(self, filename):
         f = open(filename, "r")
